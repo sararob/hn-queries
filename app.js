@@ -1,7 +1,6 @@
 //create divs for each story
 for (var i = 0; i <= 99; i++) {
   $('<div id="' + i + '">').appendTo($('#stories'));
-  console.log('creating div' + i);
 }
 
 var ref = new Firebase("https://hacker-news.firebaseio.com/v0/");
@@ -56,12 +55,13 @@ $('#show').on('click', function(e) {
   e.preventDefault();
   topRef.orderBy('title').startAt('Show HN').endAt('Shp').on('child_added', function (data) {
     var showStories = data.val();
-    $('#stories').empty();
-    var count = 0;
-    for (var story in showStories) {
-      $('#' + count).text(showStories[story].title).appendTo($('#stories'));
-      count += 1;
-    }
+    console.log(showStories);
+    // $('#stories').empty();
+    // var count = 0;
+    // for (var story in showStories) {
+    //   $('#' + count).text(showStories[story].title).appendTo($('#stories'));
+    //   count += 1;
+    // }
   });
 });
 
