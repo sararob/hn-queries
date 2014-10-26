@@ -3,19 +3,19 @@
   <script src="https://cdn.firebase.com/js/client/1.2.0-beta.2/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="moment.js"></script>
+  <script src="js/moment.js"></script>
 </head>
 <body>
   <h1 class="header">Hacker News Queries</h1>
-  <p class="subheader">Query the first 100,000 HN stories with Firebase!</p>
-    <span id="para">See the top <input type="text" id="numItems" size="5" placeholder="10"/> stories by </span>
+  <p class="subheader">Query the first 500,000 HN stories with Firebase!</p>
+    <span id="para">See the top <input type="text" id="numItems" size="5" value="10"/> stories by </span>
     <button class="filter" id="score">Points</button>
     <button class="filter" id="time">Time (most recent)</button>
-<!--     <button id="show">Show HN</button> -->
+    <button id="show">Show HN</button>
     <button class="filter" id="numComments">Number of comments</button>
-    <button class="filter" id="userKarma">Submitter's karma</button>
+    <button class="filter" id="userKarma">Submitter's karma</button><span> or </span>
     <input type="text" placeholder="Search by User ID" id="search"/>
     <div id="stories"></div>
-  <script src="hn-queries.js"></script>
+  <script src="js/hn-queries.js"></script>
 </body>
 </html>

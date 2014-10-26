@@ -38,7 +38,6 @@ $('.filter').on('click', function(e) {
 //Filter by 'Show HN'
 $('#show').on('click', function(e) {
   var num = $('#numItems').val();
-
   //This never gets called
   ref.orderBy('title').startAt('Show HN').endAt('Show HN~').limitToLast(parseInt(num)).on('value', function (snap) {
     console.log(snap.val());
