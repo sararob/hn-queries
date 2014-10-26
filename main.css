@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Gotham Light';
+  src: url("/fonts/Gotham-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("/fonts/Gotham-Bold.otf") format("opentype");
+}
+
+body {
+  font-family: 'Gotham Light';
+}
+
+a {
+  color: #FFB00F;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #A1A1A1;
+  text-decoration: underline;
+}
+
+.story {
+  display: block;
+  margin: 7px 7px 11px 7px;
+}
+
+.header {
+  text-align: center;
+  letter-spacing: .025em;
+  font-family: 'Gotham Bold';
+}
+
+.subheader {
+  margin-top: -20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#para {
+  margin-right: 5px;
+}
+
+button {
+  padding: 0.5em 1em;
+  background-color: #50b1ff;
+  border: none;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  outline: none;
+
+  color: #FFF;
+  font-weight: 300;
+  font-family: 'Gotham Light';
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+input {
+    padding: 0.5em;
+    border: 1px solid #CCC;
+    font-family: 'Gotham Light';
+    font-weight: 300;
+    font-size: 14px;
+}
+
+input#numItems {
+  width: 55px;
+}
+
+#stories {
+  margin-top: 20px;
+}

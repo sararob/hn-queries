@@ -53,7 +53,7 @@ $('#comments').on('click', function(e) {
 
 $('#show').on('click', function(e) {
   e.preventDefault();
-  topRef.orderBy('title').startAt('Show HN').endAt('Shp').on('child_added', function (data) {
+  topRef.orderBy('title').startAt('Show HN').endAt('Show HN~').on('child_added', function (data) {
     var showStories = data.val();
     console.log(showStories);
     // $('#stories').empty();
@@ -70,4 +70,14 @@ $('#karma').on('click', function(e) {
   topRef.orderBy('userKarma').on('child_added', function (data) {
     console.log(data.val());
   });
+});
+
+$('#search').on('keyup', function (e) {
+    var query = $('#search').val();
+    console.log(query);
+    var lastChar = query.substr(query.length - 1);
+    var nextChar = String.fromCharCode(lastChar.charCodeAt(0) + 1);
+    topRef.orderBy('by').startAt(query).endAt(query + '~').limitToFirst(10).on('child_added', function (snap) {
+      console.log(snap.val());
+    });
 });
