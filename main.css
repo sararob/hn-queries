@@ -59,6 +59,14 @@ button {
   cursor: pointer;
 }
 
+.isActive {
+  background-color: #FF6600;
+}
+
+.inActive {
+  background-color: #50b1ff;
+}
+
 input {
     padding: 0.5em;
     border: 1px solid #CCC;
@@ -75,6 +83,15 @@ input#numItems {
   width: 55px;
 }
 
+#intro {
+  margin: 7px;
+  color: #50b1ff;
+}
+
 #stories {
   margin-top: 20px;
+}
+
+#go {
+  margin-left: 10px;
 }
